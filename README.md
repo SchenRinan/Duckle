@@ -1,6 +1,6 @@
 # Duckle
 
-[Click here to see deployed game](https://charlotte-rmt-wdpt-mar2023.github.io/ironhack-game-project/)
+[Click here to see deployed game](https://schenrinan.github.io/Duckle/)
 
 ## Description
 
