@@ -15,8 +15,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="nav-link dropdown-toggle navbar-brand" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Duckle
-          </a>
+          <img src="images\duck-favicon.png" alt="" style="height: 30px;"></a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#howTo">How to Play</a></li>
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#credits">Credits</a></li>
@@ -112,29 +111,80 @@
     <!-- title -->
 <!-- main -->
 
-<main class="card" style="width: 800px;">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <div class="text-center">
-                <h5>Difficulty</h5>
-                <button id="btn-kid" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Kids</button>
-                <button id="btn-easy" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Easy</button>
-                <button id="btn-med" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Medium</button>
-                <button id="btn-hard" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Hard</button>
-                <button id="btn-german" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">German</button>
-            </div>
-        </li>
-    </ul>
-    <div>
-        <label>Difficulty</label>
-        <br />
-        <a href="#typeHere"><button id="btn-kid" class="selected">Kids</button></a>
-        <a href="#typeHere"><button id="btn-easy">Easy</button></a>
-        <a href="#typeHere"><button id="btn-med">Medium</button></a>
-        <a href="#typeHere"><button id="btn-hard">Hard</button></a>
-        <a href="#typeHere"><button id="btn-german">German</button></a>
-    </div>
+<main class="card position-absolute top-50 start-50 translate-middle" style="width: 800px;">
+  <div class="card-header text-center"><h1>DUCKLE</h1></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item text-center">
+      <h3>Difficulty</h3>
+      <button id="btn-kid" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Kids</button>
+      <button id="btn-easy" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Easy</button>
+      <button id="btn-med" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Medium</button>
+      <button id="btn-hard" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Hard</button>
+      <button id="btn-german" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">German</button>
+      <button id="btn-custom" class="btn btn-primary" data-bs-toggle="button" aria-pressed="true">Custom</button>
+    </li>
+    <li class="list-group-item">
+      <p id="des-kid" hidden>One word displayed at a time. <br> Player wins when Score reaches 3.</p> <!-- Description for each difficulty -->
+      <p id="des-easy" hidden></p>
+      <p id="des-med" hidden></p>
+      <p id="des-hard" hidden></p>
+      <p id="des-german" hidden></p>
+      <div id="des-custom" class="d-flex justify-content-evenly">
+        <div class="text-center">
+          <h6>Goal</h6>
+          <select id="goal">
+            <option value="1">1 words</option>
+            <option value="2">2 words</option>
+            <option value="3">3 words</option>
+            <option value="4">4 words</option>
+            <option value="5">5 words</option>
+            <option value="6">6 words</option>
+            <option value="7">7 words</option>
+            <option value="8">8 words</option>
+            <option value="9">9 words</option>
+            <option value="10">10 words</option>
+            <option value="20">20 words</option>
+            <option value="30">30 words</option>
+          </select>
+        </div>
+        <div class="text-center">
+          <h6>Lives</h6>
+          <select id="lives">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="text-center">
+          <h6>Speed</h6>
+          <select id="speed">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item text-center">
+      <button id="btn-kid" class="btn btn-outline-secondary active" data-bs-toggle="button" aria-pressed="true">Audio</button>
+      <button id="btn-kid" class="btn btn-outline-secondary active" data-bs-toggle="button" aria-pressed="true">Effects</button>
+    </li>
+    <li class="list-group-item text-center">
+      <button id="btn-start" class="btn btn-danger" data-bs-toggle="button" aria-pressed="true">Start Game</button>
+    </li>
+  </ul>
 </main>
+
+<section class="text-center">
+  <canvas></canvas>
+</section>
 
     <!-- canvas -->
 <!-- footer -->
