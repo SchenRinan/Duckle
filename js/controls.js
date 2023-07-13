@@ -24,6 +24,11 @@ btnKid.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
+    document.getElementById('goal').value = 3;
+    document.getElementById('lives').value = 0;
+    document.getElementById('speed').value = 1;
+    document.getElementById('letters').value = 1;
+    document.getElementById('difficulty').value = 1;
 })
 
 btnEasy.addEventListener("click", () => {
@@ -42,6 +47,11 @@ btnEasy.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
+    document.getElementById('goal').value = 3;
+    document.getElementById('lives').value = 3;
+    document.getElementById('speed').value = 1;
+    document.getElementById('letters').value = 2;
+    document.getElementById('difficulty').value = 2;
 })
 
 btnMed.addEventListener("click", () => {
@@ -60,6 +70,11 @@ btnMed.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
+    document.getElementById('goal').value = 5;
+    document.getElementById('lives').value = 3;
+    document.getElementById('speed').value = 2;
+    document.getElementById('letters').value = 3;
+    document.getElementById('difficulty').value = 3;
 })
 
 btnHard.addEventListener("click", () => {
@@ -78,6 +93,11 @@ btnHard.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
+    document.getElementById('goal').value = 0;
+    document.getElementById('lives').value = 4;
+    document.getElementById('speed').value = 3;
+    document.getElementById('letters').value = 4;
+    document.getElementById('difficulty').value = 4;
 })
 
 btnGerman.addEventListener("click", () => {
@@ -96,6 +116,11 @@ btnGerman.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
+    document.getElementById('goal').value = 0;
+    document.getElementById('lives').value = 4;
+    document.getElementById('speed').value = 3;
+    document.getElementById('letters').value = 4;
+    document.getElementById('difficulty').value = 5;
 })
 
 btnCustom.addEventListener("click", () => {
@@ -128,6 +153,10 @@ btnEffect.addEventListener("click", () => {
 })
 
 document.getElementById('btn-start').addEventListener('click', () => {
-    console.log('start button')
-    document.getElementById('startmenu').style.display = 'none';
+    console.log(document.getElementById('goal').value)
+    console.log(document.getElementById('lives').value)
+    console.log(document.getElementById('speed').value)
+    console.log(document.getElementById('letters').value)
+    console.log(document.getElementById('difficulty').value)
+    // document.getElementById('startmenu').style.display = 'none';
 })

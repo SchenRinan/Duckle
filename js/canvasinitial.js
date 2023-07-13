@@ -6,4 +6,9 @@ duckBG.src = "./images/Ducks.jpg";
 window.onload = () => {
     ctx.drawImage(duckBG, 0, 0, canvas.width, canvas.height);
     canvas.style.filter = "blur(5px)";
+    document.getElementById('goal').value = 3;
+    document.getElementById('lives').value = 0;
+    document.getElementById('speed').value = 1;
+    document.getElementById('letters').value = 1;
+    document.getElementById('difficulty').value = 1;
 }
