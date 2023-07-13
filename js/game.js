@@ -5,26 +5,24 @@ let animation;
 let difficulty = document.getElementById('difficulty').value;
 const input = document.getElementById("typeHere");
 const wordsOnscreen = [];
-
-
-
+let iWord;
 
 function game() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(duckBG, 0, 0, canvas.width, canvas.height);
     document.getElementById('goal').innerHTML = `Goal: ${+document.getElementById('goal').value}`;
     frames++;
+    generateWords();
     animation = requestAnimationFrame(game);
 }
 
 function generateWords() {
-    if(wordsOnscreen.length === 0){
-        let iWord = Math.floor(Math.random() * wordsArray.length);
+    if(+document.getElementById('difficulty').value === 1){
+        kidsMode();
     }
 }
 
 function dataGather() {
-    console.log(document.getElementById('difficulty').value)
     if(+document.getElementById('difficulty').value === 1 || (+document.getElementById('difficulty').value === 6 && +document.getElementById('letters').value === 1)){
         wordsArray = wordsThree.concat(wordsFour);}
     if(+document.getElementById('difficulty').value === 2 || (+document.getElementById('difficulty').value === 6 && +document.getElementById('letters').value === 2)){

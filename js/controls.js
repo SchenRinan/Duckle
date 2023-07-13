@@ -160,6 +160,9 @@ document.getElementById('btn-start').addEventListener('click', () => {
     // console.log(document.getElementById('letters').value)
     // console.log(document.getElementById('difficulty').value)
     dataGather();
+    canvas.style.filter = "blur(0px)";
     // console.log(wordsArray)
-    // document.getElementById('startmenu').style.display = 'none';
+    document.getElementById('startmenu').style.display = 'none';
+    document.getElementById('game-hud').style.display = 'block';
+    game();
 })

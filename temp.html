@@ -159,7 +159,7 @@
 
 
 <section class="text-center">
-  <canvas id="canvas" style="width: 80vw; height: 40vw;"></canvas>
+  <canvas id="canvas"></canvas>
 </section>
 
 
@@ -255,11 +255,11 @@
   </ul>
 </main>
 
-<section id="game-screen" style="display: none">
+<section id="game-hud" style="display: none" class="">
   <input type="text" name="" id="typeHere" class="text-center fs-3 position-absolute top-60 start-50 translate-middle"/>
-  <section id="annex">
+  <section id="annex" class="position-absolute top-50 start-0">
     <div id="goal"></div>
-    <div id="score">Score: 0</div>
+    <div id="score" class="fs-3">Score: 0</div>
     <div id="life"></div>
     <div id="timer"></div>
   </section>
@@ -276,5 +276,6 @@
 <script type="text/javascript" src="./js/data-german.js"></script>
 <script type="text/javascript" src="./js/controls.js"></script>
 <script type="text/javascript" src="./js/game.js"></script>
+<script type="text/javascript" src="./js/kidsMode.js"></script>
 </body>
 </html>
