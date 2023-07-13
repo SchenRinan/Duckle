@@ -139,6 +139,7 @@ btnCustom.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'block';
     document.getElementById('des-custom3').style.display = 'block';
     document.getElementById('des-custom4').style.display = 'block';
+    document.getElementById('difficulty').value = 6;
 })
 
 
@@ -153,10 +154,12 @@ btnEffect.addEventListener("click", () => {
 })
 
 document.getElementById('btn-start').addEventListener('click', () => {
-    console.log(document.getElementById('goal').value)
-    console.log(document.getElementById('lives').value)
-    console.log(document.getElementById('speed').value)
-    console.log(document.getElementById('letters').value)
-    console.log(document.getElementById('difficulty').value)
+    // console.log(document.getElementById('goal').value)
+    // console.log(document.getElementById('lives').value)
+    // console.log(document.getElementById('speed').value)
+    // console.log(document.getElementById('letters').value)
+    // console.log(document.getElementById('difficulty').value)
+    dataGather();
+    // console.log(wordsArray)
     // document.getElementById('startmenu').style.display = 'none';
 })
