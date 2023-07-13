@@ -33,3 +33,4 @@ function dataGather() {
         wordsArray = wordsTen.concat(wordsNine).concat(wordsEight).concat(wordsFive).concat(wordsSix).concat(wordsSeven);}
     if(+document.getElementById('difficulty').value == 5){wordsArray = wordsGerman;}
 }
+

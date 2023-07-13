@@ -164,5 +164,6 @@ document.getElementById('btn-start').addEventListener('click', () => {
     // console.log(wordsArray)
     document.getElementById('startmenu').style.display = 'none';
     document.getElementById('game-hud').style.display = 'block';
+    window.location = "#typeHere";
     game();
 })
