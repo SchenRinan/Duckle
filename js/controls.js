@@ -29,6 +29,7 @@ btnKid.addEventListener("click", () => {
     document.getElementById('set-speed').value = 1;
     document.getElementById('set-letters').value = 1;
     document.getElementById('set-difficulty').value = 1;
+    ctx.font = "bold 15vw sans-serif";
 })
 
 btnEasy.addEventListener("click", () => {
@@ -52,6 +53,7 @@ btnEasy.addEventListener("click", () => {
     document.getElementById('set-speed').value = 1;
     document.getElementById('set-letters').value = 2;
     document.getElementById('set-difficulty').value = 2;
+    ctx.font = "bold 3vw sans-serif";
 })
 
 btnMed.addEventListener("click", () => {
@@ -75,6 +77,7 @@ btnMed.addEventListener("click", () => {
     document.getElementById('set-speed').value = 2;
     document.getElementById('set-letters').value = 3;
     document.getElementById('set-difficulty').value = 3;
+    ctx.font = "bold 3vw sans-serif";
 })
 
 btnHard.addEventListener("click", () => {
@@ -98,6 +101,7 @@ btnHard.addEventListener("click", () => {
     document.getElementById('set-speed').value = 3;
     document.getElementById('set-letters').value = 4;
     document.getElementById('set-difficulty').value = 4;
+    ctx.font = "bold 3vw sans-serif";
 })
 
 btnGerman.addEventListener("click", () => {
@@ -121,6 +125,7 @@ btnGerman.addEventListener("click", () => {
     document.getElementById('set-speed').value = 3;
     document.getElementById('set-letters').value = 4;
     document.getElementById('set-difficulty').value = 5;
+    ctx.font = "bold 3vw sans-serif";
 })
 
 btnCustom.addEventListener("click", () => {
@@ -140,17 +145,28 @@ btnCustom.addEventListener("click", () => {
     document.getElementById('des-custom3').style.display = 'block';
     document.getElementById('des-custom4').style.display = 'block';
     document.getElementById('set-difficulty').value = 6;
+    ctx.font = "bold 3vw sans-serif";
 })
 
 
 //controls for audio effects missing
 //start the game button still needs work
 btnAudio.addEventListener("click", () => {
-    console.log('audio button')
+    if(document.getElementById('btn-aud').classList.contains('active')){ music.volume = 1; }
+    else{ music.volume = 0; }
 })
 
 btnEffect.addEventListener("click", () => {
-    console.log('Effect button')
+    if(document.getElementById('btn-eff').classList.contains('active')){ 
+        correctSound.volume = 1;
+        winSound.volume = 1;
+        loseSound.volume = 1;
+    }
+    else{ 
+        correctSound.volume = 0;
+        winSound.volume = 0;
+        loseSound.volume = 0;
+    }
 })
 
 document.getElementById('btn-start').addEventListener('click', () => {
@@ -168,4 +184,29 @@ document.getElementById('btn-start').addEventListener('click', () => {
     window.location = "#typeHere";
     animation = true;
     game();
+    music.play();
+})
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+    // console.log(document.getElementById('goal').value)
+    // console.log(document.getElementById('lives').value)
+    // console.log(document.getElementById('speed').value)
+    // console.log(document.getElementById('letters').value)
+    // console.log(document.getElementById('difficulty').value)
+    // dataGather();
+    // canvas.style.filter = "blur(0px)";
+    // life = +document.getElementById('set-lives').value;
+    // console.log(wordsArray)
+    timer = 61;
+    frames = 0;
+    score = 0;
+    wordsOnscreen.length = 0;
+    document.getElementById('startmenu').style.display = 'block';
+    document.getElementById('game-hud').style.display = 'none';
+    document.getElementById('end-screen').style.display = 'none';
+    document.getElementById('lose').style.display = 'none';
+    document.getElementById('win').style.display = 'none';
+    // window.location = "#typeHere";
+    // animation = true;
+    // game();
 })

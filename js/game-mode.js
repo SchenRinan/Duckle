@@ -67,48 +67,51 @@ function checkWord() {
       wordsOnscreen.splice(isolateWord.indexOf(input.value), 1);
       input.value = "";
       score++;
-    //   correctSound.play();
+      correctSound.play();
     }
     document.getElementById("score").innerHTML = `Score: ${score}`;
 }
 
 function loseLife() {
-    if (document.getElementById('set-difficulty').value > 1) {
-      document.getElementById("life").innerHTML = `Life: ${life}`;
-    }
-    for (i = 0; i < wordsOnscreen.length; i++) {
-      if (wordsOnscreen[i].y > canvas.height + 50) {
-        wordsOnscreen.splice(i, 1);
-        if (document.getElementById('set-difficulty').value > 1) {
-          life--;
-          // lose life sound .play();
-        }
+  for (i = 0; i < wordsOnscreen.length; i++) {
+    if (wordsOnscreen[i].y > canvas.height + 50) {
+      wordsOnscreen.splice(i, 1);
+      if (+document.getElementById("set-lives").value > 0) {
+        life--;
+        // lose life sound .play();
+        loseSound.play();
       }
     }
+  }
+  if (document.getElementById('set-difficulty').value > 1) {
+    document.getElementById("life").innerHTML = `Life: ${life}`;
+  }
 }
+
 function win() {
-  if(+document.getElementById("set-difficulty").value === 2 || +document.getElementById("set-difficulty").value === 3){
+  if(+document.getElementById("set-goal").value > 0){
     if(score === +document.getElementById("set-goal").value ){
       canvas.style.filter = "blur(5px)";  
       animation = false;
       // cancelAnimationFrame();
       // togglescreen("gameover-screen", true);
-      
-      // document.getElementById('win-lose').innerHTML = '<img src="./images/8706.png" id="win" alt=""/>';
-      // music.pause();
-      // winSound.play();
+      document.getElementById('end-screen').style = 'block';
+      document.getElementById('win').style = 'height: 300px; display: block;';
+      music.pause();
+      winSound.play();
     }
   }
 }
 
 //lose condition
 function lose() {
-  if(+document.getElementById("set-difficulty").value === 2 || +document.getElementById("set-difficulty").value === 3 || +document.getElementById("set-difficulty").value === 4 || +document.getElementById("set-difficulty").value === 5){
+  if(+document.getElementById("set-lives").value > 0){
     if (life < 1) {
         
       // togglescreen("gameover-screen", true);
       canvas.style.filter = "blur(5px)";
-      // document.getElementById('win-lose').innerHTML = '<img src="./images/te856-removebg-preview.png" id="lose" alt=""/>';
+      document.getElementById('end-screen').style = 'block';
+      document.getElementById('lose').style = 'height: 300px; display: block;;';
       // music.pause();
       // loseSound.play();
       // cancelAnimationFrame();

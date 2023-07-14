@@ -8,10 +8,10 @@ function kidsMode(){
         let color = `rgb(${red},${green},${blue})`;
         ctx.fillStyle = color;
     }
-    ctx.font = "bold 15vw sans-serif";
+    
     ctx.fillText(wordsOnscreen[0].toLowerCase(), (canvas.width - ctx.measureText(wordsOnscreen[0].toLowerCase()).width)/2, canvas.height*.6);
     checkWordKids();
-    kidsWin();
+    win();
 }
 
 function checkWordKids() {
@@ -19,7 +19,7 @@ function checkWordKids() {
         wordsOnscreen.splice(0, 1);
         input.value = "";
         score++;
-        // correctSound.play();
+        correctSound.play();
     }
     document.getElementById("score").innerHTML = `Score: ${score}`;
   }

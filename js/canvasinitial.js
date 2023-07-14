@@ -9,9 +9,14 @@ let life;
 let timer = 61;
 canvas.width = window.innerWidth * 0.8;
 canvas.height = window.innerWidth * 0.4;
+const music = document.getElementById("music");
+const correctSound = document.getElementById("correct-sound");
+const winSound = document.getElementById("win-sound");
+const loseSound = document.getElementById("lose-sound");
 
 window.onload = () => {
-    ctx.font = "bold 3vw sans-serif";
+    music.load();
+    ctx.font = "bold 15vw sans-serif";
     ctx.drawImage(duckBG, 0, 0, canvas.width, canvas.height);
     canvas.style.filter = "blur(5px)";
     document.getElementById('set-goal').value = 3;

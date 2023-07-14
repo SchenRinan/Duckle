@@ -21,13 +21,13 @@ function generateWords() {
 }
 
 function dataGather() {
-    if(+document.getElementById('set-difficulty').value === 1 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('letters').value === 1)){
+    if(+document.getElementById('set-difficulty').value === 1 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('set-letters').value === 1)){
         wordsArray = wordsThree.concat(wordsFour);}
-    if(+document.getElementById('set-difficulty').value === 2 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('letters').value === 2)){
+    if(+document.getElementById('set-difficulty').value === 2 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('set-letters').value === 2)){
         wordsArray = wordsFour.concat(wordsFive);}
-    if(+document.getElementById('set-difficulty').value === 3 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('letters').value === 3)){
+    if(+document.getElementById('set-difficulty').value === 3 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('set-letters').value === 3)){
         wordsArray = wordsFive.concat(wordsSix).concat(wordsSeven);}
-    if(+document.getElementById('set-difficulty').value === 4 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('letters').value === 4)){
+    if(+document.getElementById('set-difficulty').value === 4 || (+document.getElementById('set-difficulty').value === 6 && +document.getElementById('set-letters').value === 4)){
         wordsArray = wordsTen.concat(wordsNine).concat(wordsEight).concat(wordsFive).concat(wordsSix).concat(wordsSeven);}
     if(+document.getElementById('set-difficulty').value == 5){wordsArray = wordsGerman;}
 }
