@@ -9,7 +9,8 @@ function game() {
     document.getElementById('goal').innerHTML = `Goal: ${+document.getElementById('set-goal').value}`;
     frames++;
     generateWords();
-    animation = requestAnimationFrame(game);
+    if(animation){ requestAnimationFrame(game);  }
+    // animation = requestAnimationFrame(game);
 }
 
 function generateWords() {

@@ -4,6 +4,8 @@ function gameMode(){
     countdown();
     checkWord();
     loseLife();
+    win();
+    lose();
 }
 
 function countdown() {
@@ -35,7 +37,6 @@ function putWordsOnscreen(){
         let word = wordsArray[iWord];
         let y = 0;
         let startingx = Math.floor(Math.random() * (canvas.width - ctx.measureText(word).width));
-        console.log(ctx.measureText(word).width)
         let red = Math.floor(Math.random() * 255);
         let green = Math.floor(Math.random() * 255);
         let blue = Math.floor(Math.random() * 255);
@@ -84,4 +85,42 @@ function loseLife() {
         }
       }
     }
+}
+function win() {
+  if(+document.getElementById("set-difficulty").value === 2 || +document.getElementById("set-difficulty").value === 3){
+    if(score === +document.getElementById("set-goal").value ){
+      canvas.style.filter = "blur(5px)";  
+      animation = false;
+      // cancelAnimationFrame();
+      // togglescreen("gameover-screen", true);
+      
+      // document.getElementById('win-lose').innerHTML = '<img src="./images/8706.png" id="win" alt=""/>';
+      // music.pause();
+      // winSound.play();
+    }
   }
+}
+
+//lose condition
+function lose() {
+  if(+document.getElementById("set-difficulty").value === 2 || +document.getElementById("set-difficulty").value === 3 || +document.getElementById("set-difficulty").value === 4 || +document.getElementById("set-difficulty").value === 5){
+    if (life < 1) {
+        
+      // togglescreen("gameover-screen", true);
+      canvas.style.filter = "blur(5px)";
+      // document.getElementById('win-lose').innerHTML = '<img src="./images/te856-removebg-preview.png" id="lose" alt=""/>';
+      // music.pause();
+      // loseSound.play();
+      // cancelAnimationFrame();
+      animation = false;
+    }
+  }
+  // if (difficulty > 1 && life < 1) {
+  //   cancelAnimationFrame(animation);
+  //   togglescreen("gameover-screen", true);
+  //   canvas.style.filter = "blur(5px)";
+  //   document.getElementById('win-lose').innerHTML = '<img src="./images/te856-removebg-preview.png" id="lose" alt=""/>';
+  //   music.pause();
+  //   loseSound.play();
+  // }
+}

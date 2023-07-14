@@ -161,10 +161,11 @@ document.getElementById('btn-start').addEventListener('click', () => {
     // console.log(document.getElementById('difficulty').value)
     dataGather();
     canvas.style.filter = "blur(0px)";
-    life = +document.getElementById('set-difficulty').value;
+    life = +document.getElementById('set-lives').value;
     // console.log(wordsArray)
     document.getElementById('startmenu').style.display = 'none';
     document.getElementById('game-hud').style.display = 'block';
     window.location = "#typeHere";
+    animation = true;
     game();
 })
