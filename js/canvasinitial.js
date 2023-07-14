@@ -13,6 +13,10 @@ const music = document.getElementById("music");
 const correctSound = document.getElementById("correct-sound");
 const winSound = document.getElementById("win-sound");
 const loseSound = document.getElementById("lose-sound");
+music.volume = 0.5;
+correctSound.volume = 1;
+winSound.volume = 1;
+loseSound.volume = 1;
 
 window.onload = () => {
     music.load();

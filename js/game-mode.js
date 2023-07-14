@@ -112,7 +112,7 @@ function lose() {
       canvas.style.filter = "blur(5px)";
       document.getElementById('end-screen').style = 'block';
       document.getElementById('lose').style = 'height: 300px; display: block;;';
-      // music.pause();
+      music.pause();
       // loseSound.play();
       // cancelAnimationFrame();
       animation = false;

@@ -152,7 +152,7 @@ btnCustom.addEventListener("click", () => {
 //controls for audio effects missing
 //start the game button still needs work
 btnAudio.addEventListener("click", () => {
-    if(document.getElementById('btn-aud').classList.contains('active')){ music.volume = 1; }
+    if(document.getElementById('btn-aud').classList.contains('active')){ music.volume = 0.5; }
     else{ music.volume = 0; }
 })
 
