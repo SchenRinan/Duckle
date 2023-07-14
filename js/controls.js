@@ -24,11 +24,11 @@ btnKid.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
-    document.getElementById('goal').value = 3;
-    document.getElementById('lives').value = 0;
-    document.getElementById('speed').value = 1;
-    document.getElementById('letters').value = 1;
-    document.getElementById('difficulty').value = 1;
+    document.getElementById('set-goal').value = 3;
+    document.getElementById('set-lives').value = 0;
+    document.getElementById('set-speed').value = 1;
+    document.getElementById('set-letters').value = 1;
+    document.getElementById('set-difficulty').value = 1;
 })
 
 btnEasy.addEventListener("click", () => {
@@ -47,11 +47,11 @@ btnEasy.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
-    document.getElementById('goal').value = 3;
-    document.getElementById('lives').value = 3;
-    document.getElementById('speed').value = 1;
-    document.getElementById('letters').value = 2;
-    document.getElementById('difficulty').value = 2;
+    document.getElementById('set-goal').value = 3;
+    document.getElementById('set-lives').value = 3;
+    document.getElementById('set-speed').value = 1;
+    document.getElementById('set-letters').value = 2;
+    document.getElementById('set-difficulty').value = 2;
 })
 
 btnMed.addEventListener("click", () => {
@@ -70,11 +70,11 @@ btnMed.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
-    document.getElementById('goal').value = 5;
-    document.getElementById('lives').value = 3;
-    document.getElementById('speed').value = 2;
-    document.getElementById('letters').value = 3;
-    document.getElementById('difficulty').value = 3;
+    document.getElementById('set-goal').value = 5;
+    document.getElementById('set-lives').value = 3;
+    document.getElementById('set-speed').value = 2;
+    document.getElementById('set-letters').value = 3;
+    document.getElementById('set-difficulty').value = 3;
 })
 
 btnHard.addEventListener("click", () => {
@@ -93,11 +93,11 @@ btnHard.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
-    document.getElementById('goal').value = 0;
-    document.getElementById('lives').value = 4;
-    document.getElementById('speed').value = 3;
-    document.getElementById('letters').value = 4;
-    document.getElementById('difficulty').value = 4;
+    document.getElementById('set-goal').value = 0;
+    document.getElementById('set-lives').value = 4;
+    document.getElementById('set-speed').value = 3;
+    document.getElementById('set-letters').value = 4;
+    document.getElementById('set-difficulty').value = 4;
 })
 
 btnGerman.addEventListener("click", () => {
@@ -116,11 +116,11 @@ btnGerman.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'none';
     document.getElementById('des-custom3').style.display = 'none';
     document.getElementById('des-custom4').style.display = 'none';
-    document.getElementById('goal').value = 0;
-    document.getElementById('lives').value = 4;
-    document.getElementById('speed').value = 3;
-    document.getElementById('letters').value = 4;
-    document.getElementById('difficulty').value = 5;
+    document.getElementById('set-goal').value = 0;
+    document.getElementById('set-lives').value = 4;
+    document.getElementById('set-speed').value = 3;
+    document.getElementById('set-letters').value = 4;
+    document.getElementById('set-difficulty').value = 5;
 })
 
 btnCustom.addEventListener("click", () => {
@@ -139,7 +139,7 @@ btnCustom.addEventListener("click", () => {
     document.getElementById('des-custom2').style.display = 'block';
     document.getElementById('des-custom3').style.display = 'block';
     document.getElementById('des-custom4').style.display = 'block';
-    document.getElementById('difficulty').value = 6;
+    document.getElementById('set-difficulty').value = 6;
 })
 
 
@@ -161,6 +161,7 @@ document.getElementById('btn-start').addEventListener('click', () => {
     // console.log(document.getElementById('difficulty').value)
     dataGather();
     canvas.style.filter = "blur(0px)";
+    life = +document.getElementById('set-difficulty').value;
     // console.log(wordsArray)
     document.getElementById('startmenu').style.display = 'none';
     document.getElementById('game-hud').style.display = 'block';
