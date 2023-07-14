@@ -174,7 +174,8 @@ document.getElementById('btn-start').addEventListener('click', () => {
     // console.log(document.getElementById('lives').value)
     // console.log(document.getElementById('speed').value)
     // console.log(document.getElementById('letters').value)
-    // console.log(document.getElementById('difficulty').value)
+    // console.log(document.getElementById('set-difficulty').value)
+    if(+document.getElementById('set-difficulty').value === 1){document.getElementById('timer').style.display = 'none'}
     dataGather();
     canvas.style.filter = "blur(0px)";
     life = +document.getElementById('set-lives').value;
